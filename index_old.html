@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAYER</title>
+    <meta
+      name="description"
+      content="Static portfolio for Talal Nayer, rebuilt for GitHub Pages."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script defer src="./assets/site.js"></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <button
+          class="icon-button"
+          type="button"
+          data-menu-toggle
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="site-drawer"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <a class="brand" href="/" data-route="/">
+          <img
+            src="./assets/media/nayer-signature.png"
+            alt="Nayer"
+            class="brand-mark"
+          />
+        </a>
+
+        <button class="search-button" type="button" data-search-toggle>
+          Search
+        </button>
+      </header>
+
+      <aside class="drawer" id="site-drawer" data-drawer aria-hidden="true">
+        <div class="drawer-inner">
+          <div class="drawer-header">
+            <p class="drawer-label">Navigate the archive</p>
+            <button class="drawer-close" type="button" data-menu-toggle>
+              Close
+            </button>
+          </div>
+
+          <label class="search-field">
+            <span>Find a page</span>
+            <input
+              type="search"
+              data-route-search
+              placeholder="Search biographies, essays, pages..."
+            />
+          </label>
+
+          <nav class="drawer-nav" aria-label="Primary"></nav>
+          <div class="drawer-results" data-search-results></div>
+        </div>
+      </aside>
+
+      <div class="drawer-backdrop" data-backdrop hidden></div>
+
+      <main id="app" class="app-shell" tabindex="-1"></main>
+
+      <footer class="site-footer">
+        <p>
+          <span data-footer-year></span> NAYER &middot; rebuilt as a static
+          GitHub Pages portfolio.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
